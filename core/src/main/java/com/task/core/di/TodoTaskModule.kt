@@ -1,8 +1,8 @@
 package com.task.core.di
 
 import com.task.core.data.data_source.NetworkApi
-import com.task.core.data.repository.UniversityRepositoryImpl
-import com.task.core.domain.repository.UniversityRepository
+import com.task.core.data.repository.TodoTaskRepositoryImpl
+import com.task.core.domain.repository.TodoTaskRepository
 import com.task.core.util.Constant.BASE_URL
 import dagger.Module
 import dagger.Provides
@@ -14,7 +14,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object UniversityModule {
+object TodoTaskModule {
 
     @Provides
     @Singleton
@@ -29,7 +29,7 @@ object UniversityModule {
 
     @Provides
     @Singleton
-    fun provideUniversityRepository(networkApi: NetworkApi): UniversityRepository {
-        return UniversityRepositoryImpl(networkApi)
+    fun provideUniversityRepository(networkApi: NetworkApi): TodoTaskRepository {
+        return TodoTaskRepositoryImpl(networkApi)
     }
 }

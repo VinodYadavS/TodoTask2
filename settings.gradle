@@ -12,6 +12,6 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "University"
+rootProject.name = "TodoTask"
 include ':app'
 include ':core'
